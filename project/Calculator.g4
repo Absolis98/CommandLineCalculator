@@ -1,19 +1,19 @@
 grammar Calculator;
 program : statement+ ;
-statement : expression NEWLINE						# printExpr
-| ID '=' expression NEWLINE							# assign
-| NEWLINE											# blank
+statement : expression NEWLINE					# printExpr
+| ID '=' expression NEWLINE					# assign
+| NEWLINE							# blank
 ;
 expression : 
   	expression op=(ADD|SUB) expression			# AddSub
 | expression op=(MUL|DIV) expression				# MulDiv
 | op=(SIN|COS|TAN|ASIN|ACOS|ATAN) '(' expression ')'		# Trig
-| op=(LN|LOG) '(' expression ')'					# Log
-| op=SQRT '(' expression ')'						# Sqrt
+| op=(LN|LOG) '(' expression ')'				# Log
+| op=SQRT '(' expression ')'					# Sqrt
 | expression op=(GT|LT|EQ) expression				# Logic
-| INT												# int
-| ID												# id
-| '(' expression ')'								# parens
+| INT								# int
+| ID								# id
+| '(' expression ')'						# parens
 ;
 SIN : 'sin';
 COS : 'cos';
