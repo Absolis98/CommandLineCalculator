@@ -1,5 +1,7 @@
 # CommandLineCalculator
-A command line calculator created using ANTLR. Eeuations can be inputed while the program is running, or equations can be read from a file.
+A command line calculator created using ANTLR. Equations can be inputed while the program is running, or equations can be read from a file.
+The calculator is able to do addition, subtraction, multiplication, and division. It can also store variables (a=4, a+4=8). The calculator also supports
+trigonometric functions, boolean logic comparisons (>, <, ==), and operation order priority (PEMDAS).
 
 How to Use
 --------------
@@ -18,7 +20,7 @@ Read a File Containing Equations:
 
 ![](demos/readFile.gif)
 
-Here are the contents inside test.expr
+Here are the contents (equations) inside test.expr
 
 ![](demos/testexpr.png)
 
